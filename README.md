@@ -8,7 +8,7 @@ it creates three containers:
   2. Flask Web server Container
   3. Python Container 
 
-**) The MongoDb container will save all the data inside a collection called "twitterMessagesDocker"
+**) The MongoDb container will build and run mongodb on port 27017
 
 **) Flask web server container will build and run the flask application which listens to port: 5000 (check the docker-compose.yml file)
 It will also connect to mongodb collection, and retrieve all the items fron that collection, then it will display it inside the todo.html file.

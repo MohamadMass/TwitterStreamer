@@ -1,6 +1,5 @@
 web:
-  build: .
-  command: bash -c "python -u myapp.py"
+  build: ./api-service
   ports:
     - "5000:5000"
   volumes:
@@ -10,3 +9,10 @@ web:
 db:
   image: mongo:3.0.2
   command: --smallfiles
+python_script:
+  build: .
+  command: bash -c "python -u myapp.py"
+  volumes:
+   - .:/todo
+  links:
+   - db
